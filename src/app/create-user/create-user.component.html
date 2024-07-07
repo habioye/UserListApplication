@@ -1,1 +1,21 @@
 <p>create-user works!</p>
+<div>
+    <h2>Add User</h2>
+    <form (ngSubmit)="addUser()">
+        <label for="firstname">First Name: </label>
+        <input id="firstname" [(ngModel)] = user.firstname type="text" name="firstname" required>
+        <label for="lastname">Last Name: </label>
+        <input id="lastname" [(ngModel)] = user.lastname type="text" name="lastname" required>
+        <label for="role">Role</label>
+        <input type="text">
+        <label for="exampleFormControlSelect1">Example select</label>
+    <select class="form-control" id="exampleFormControlSelect1" [(ngModel)] = user.role required>
+      <option>Owner</option>
+      <option>Admin</option>
+      <option>Restricted Admin</option>
+      <option>User</option>
+      <option>Guest</option>
+    </select>
+    <button type="submit"><a routerLink="''">Add</a></button>
+    </form>
+</div>
